@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/createIssue.css">
+
+
+
+
+<div class="mainContainer">
+
+<div class="createForms">
+
+    <h2 class="headerTitle">Enter Issue for Project :<%= projectt.name %> </h2>
+<br>
+
+
+  <form method="post" action="/createProject/newIssue/<%= projectt._id %>">
+
+    <!-- Title -->
+    <div class="form-group">
+      <label for="exampleInputEmail1"  class="labelClass">Title</label>
+      <input type="text" class="form-control" name="title" aria-describedby="emailHelp" placeholder="Enter Title" required>
+     
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="exampleInputEmail1"  class="labelClass">Description</label>
+      <input type="text" class="form-control"  name="description" aria-describedby="emailHelp" required placeholder="Enter Description" autocomplete="off">
+     
+    </div>
+
+    <label for="dropDown"  class="labelClass">Labels</label>
+    <div class="dropDown">
+        <select name="labels" id="" class="selectLabels">
+            <option value="" disabled selected>Select an option</option>
+            <option value="1" class="optionLabels">UI Improvement</option>
+            <option value="2" class="optionLabels">Bug Fix</option>
+            <option value="3" class="optionLabels">Documentation</option>
+        </select>
+    </div>
+   <!-- Author -->
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="labelClass">Author</label>
+      <input type="text" name="author" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Author">
+     
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Issue</button>
+
+
+  </form>
+
+
+</div>
+
+</div>
