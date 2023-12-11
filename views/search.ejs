@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/createIssue.css">
+
+
+
+<div class="containerforSearch">
+
+
+
+  <%if(searcheddata.length>0){%>
+
+    <h1 style="color: black;text-align: center;font-family: 'Manrope',sans-serif;font-weight: 800;">Results Found : &nbsp;<%= searcheddata.length %></h1>
+  
+      <% for(let search of searcheddata){%>
+  
+        <div class="cardforSearch">
+
+            <span class="searchName"><%= search.name %></span>
+
+           <span>
+            <a href="/createProject/detailsPage/<%= search.id %>" method="get">
+              <button class="btngetDetails">Get Details
+                 <i class="fa-solid fa-arrow-right move-right-arrow"></i>
+              </button>  
+           </a>
+           </span>
+        
+        </div>
+  
+  
+      <%}%>
+  <%}else{%>
+    
+    <h1 style="color: black;text-align: center;font-family: 'Manrope',sans-serif;font-weight: 800;">No data Available &nbsp;-_-</h1>
+    <%}%>
+
+    
+
+
+
+</div>

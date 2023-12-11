@@ -8,6 +8,9 @@ const home_Controller = require('../controller/home_controller');
 
 router.get('/' , home_Controller.home);
 
+router.get('/search' ,home_Controller.search);
+
+
 router.use('/createProject' , require('./createProject'));
 
 

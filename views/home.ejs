@@ -9,7 +9,24 @@
    </a>
 </div>
 
-     
+<br>
+
+<!-- <form action="/search" method="get">
+   <input type="text" name="q" placeholder="Search projects">
+   <button type="submit">Search</button>
+</form> -->
+
+
+<!-- HTML code with a search input -->
+<form action="/search" method="get">
+<div class="search-container">
+   <input type="text" name="q" id="search-input" placeholder="Search projects">
+   <button type="submit" id="search-button">Search</button>
+</div>
+
+</form>
+
+<br><br>
    <% if(projectdetails.length>0) {%>
 
    <% for(let project of projectdetails ){ %>

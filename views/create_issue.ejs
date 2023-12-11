@@ -7,7 +7,7 @@
 
 <div class="createForms">
 
-    <h2 class="headerTitle">Enter Issue for Project :<%= projectt.name %> </h2>
+    <h2 class="headerTitle">Enter Issue for Project : <span class="nameOfProject"><%= projectt.name %></span> </h2>
 <br>
 
 
@@ -20,6 +20,7 @@
      
     </div>
 
+    <br>
     <!-- Description -->
     <div class="form-group">
       <label for="exampleInputEmail1"  class="labelClass">Description</label>
@@ -27,6 +28,7 @@
      
     </div>
 
+    <br>
     <label for="dropDown"  class="labelClass">Labels</label>
     <div class="dropDown">
         <select name="labels" id="" class="selectLabels">
@@ -36,6 +38,7 @@
             <option value="3" class="optionLabels">Documentation</option>
         </select>
     </div>
+    <br>
    <!-- Author -->
     <div class="form-group">
       <label for="exampleInputEmail1" class="labelClass">Author</label>
@@ -43,7 +46,14 @@
      
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit Issue</button>
+    <br>
+
+    <!-- <button type="submit" class="btn btn-primary">Submit Issue</button> -->
+
+    
+    <div class="d-flex justify-content-center">
+      <button  type="submit" class="btn btn-danger">Submit Issue</button>
+    </div>
 
 
   </form>
