@@ -3,6 +3,16 @@
 
 
 <div class="displaymain">
+
+
+  <div class="homeredirect">
+    <a href="/">
+    <button class="custom-button"> Home &nbsp;<i class="fa-solid fa-house"></i></i></button>
+    </a>
+  </div>
+
+
+
   <div class="create-Issue">
     <a href="/createProject/create_issue/<%= detailsDisplay.id %>" >
       <button class="btncreateissue">&nbsp;
@@ -34,7 +44,9 @@
 
   <!-- Delete Icon -->
     <a href="/createProject/destroy_Bug/<%= issue.id %>"> 
-      <i class="fa-solid fa-trash fa-bounce fa-2x" style="color: #1f5120;float: right;"></i>
+      <i class="fa-solid fa-trash fa-bounce fa-2x" style="color: #0e0f0e;position: relative;
+      left: 50%;
+      top: 16%;"></i>
     </a>
 
   </div>

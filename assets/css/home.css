@@ -27,9 +27,18 @@ header h1{
   min-height: 90vh;
   
 }
+
+.fullWidth{
+  width: 100%;
+  display: inline-flex;
+}
+.halfWidth{
+  width: 50%;
+  margin-top: 5px;
+}
 .createProject{
     height: 5vh;
-    width: 95vw;
+    /* width: 95vw; */
 }
 
 .btncreate{
@@ -41,7 +50,7 @@ header h1{
     font-size: 18px;
     font-weight: 800;
     float: right;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     font-family: 'Manrope',sans-serif;
 }
 .btncreate:hover{
@@ -73,7 +82,7 @@ header h1{
 #search-button {
   height: 50px;
   padding: 10px;
-  background-color: #3498db;
+  background-color: #1a73e8;
   color: #fff;
   border: none;
   margin-left: -40px;
@@ -97,6 +106,8 @@ header h1{
   font-family: 'Roboto', sans-serif;
   overflow: hidden; /* Ensures the arrow doesn't overflow the button */
 }
+
+
 
 .move-right-arrow {
   transition: transform 0.3s ease-in-out;

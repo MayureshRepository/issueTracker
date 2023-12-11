@@ -1,63 +1,91 @@
 
 <link rel="stylesheet" href="/css/home.css">
-<div class="createProject">
-   <a href="/createProject/create">
-    <button class="btncreate">&nbsp;
-        <i class="fa-solid fa-plus"></i>&nbsp;
-        <span>Create Project</span>
-    </button>
-   </a>
-</div>
-
-<br>
-
-<!-- <form action="/search" method="get">
-   <input type="text" name="q" placeholder="Search projects">
-   <button type="submit">Search</button>
-</form> -->
 
 
-<!-- HTML code with a search input -->
-<form action="/search" method="get">
-<div class="search-container">
-   <input type="text" name="q" id="search-input" placeholder="Search projects">
-   <button type="submit" id="search-button">Search</button>
-</div>
+<div class="fullWidth">
 
-</form>
+  <div class="halfWidth">
+   
+      <!-- HTML code with a search input starts -->
+      <form action="/search" method="get">
+         <div class="search-container">
+               <input type="text" name="q" id="search-input" placeholder="Search projects">
+               <button type="submit" id="search-button">Search</button>
+         </div>
+      </form>
+
+   </div><!-- Halfwidth Ends-->
+       <!-- HTML code with a search input ends -->
+   
+
+   
+ <!-- Button starts -->
+
+ <div class="halfWidth">
+      <div class="createProject">
+               <a href="/createProject/create">
+               <button class="btncreate">&nbsp;
+                  <i class="fa-solid fa-plus"></i>&nbsp;
+                  <span>Create Project</span>
+               </button>
+               </a>
+      </div>
+
+   </div> <!-- halfwidth Ends-->
+    <!-- Buttons starts -->
+
+
+   
+
+   </div>  <!-- Fullwidth Ends-->
+   
+
+
+
+
+
 
 <br><br>
+ <div class="cardContainer">
+
+
+
+
    <% if(projectdetails.length>0) {%>
 
-   <% for(let project of projectdetails ){ %>
+      <% for(let project of projectdetails ){ %>
+   
+     
+   
+    
+   
+       <div class="card">
+         <h5 class="card-title"><%= project.name %></h5>
+         <p class="card-description"><%= project.description %></p>
+         <p class="card-author"><%= project.author %></p>
+   
+         <a href="/createProject/detailsPage/<%= project.id %>" method="get">
+            <button class="btngetDetails">Get Details
+               <i class="fa-solid fa-arrow-right move-right-arrow"></i>
+            </button>  
+         </a>
+       </div>
+   
+   
+   
+   
+   
+       <% } %>
+   
+   
+      <%}else{%>
+            <h2>No Project Found -_- </h2>
+       <% } %>
 
-  
-
- 
-
-    <div class="card">
-      <h5 class="card-title"><%= project.name %></h5>
-      <p class="card-description"><%= project.description %></p>
-      <p class="card-author"><%= project.author %></p>
-
-      <a href="/createProject/detailsPage/<%= project.id %>" method="get">
-         <button class="btngetDetails">Get Details
-            <i class="fa-solid fa-arrow-right move-right-arrow"></i>
-         </button>  
-      </a>
-    </div>
+       
 
 
-
-
-
-    <% } %>
-
-
-   <%}else{%>
-         <h2>No Project Found -_- </h2>
-    <% } %>
-
+ </div>
 
 
 
